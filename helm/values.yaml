@@ -1,0 +1,9 @@
+
+replicaCount: 3
+
+image:
+  repository: quay.io/myrepo/my-secure-app
+  tag: latest
+
+securityContext:
+  runAsNonRoot: true

@@ -1,0 +1,7 @@
+## configs/app-config.yaml
+```yaml
+database:
+  host: db-service
+  user: admin
+  password: securepassword
+```

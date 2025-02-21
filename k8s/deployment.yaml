@@ -1,0 +1,29 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-secure-app
+  namespace: secure-namespace
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-secure-app
+  template:
+    metadata:
+      labels:
+        app: my-secure-app
+    spec:
+      securityContext:
+        runAsNonRoot: true
+      containers:
+      - name: my-secure-container
+        image: quay.io/myrepo/my-secure-app:latest
+        ports:
+        - containerPort: 8080
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+          readOnlyRootFilesystem: true

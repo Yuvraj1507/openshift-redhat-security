@@ -1,0 +1,14 @@
+
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: build-and-deploy
+spec:
+  tasks:
+    - name: build-image
+      taskRef:
+        name: kaniko
+    - name: deploy-app
+      taskRef:
+        name: kubectl
+

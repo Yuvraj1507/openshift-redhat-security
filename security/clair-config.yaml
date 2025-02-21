@@ -1,0 +1,9 @@
+## security/clair-config.yaml
+```yaml
+clair:
+  database:
+    type: pgsql
+    options:
+      source: postgres://clair:password@clair-db:5432/clair
+      cache-connection: true
+```

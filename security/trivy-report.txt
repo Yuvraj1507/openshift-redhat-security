@@ -1,0 +1,10 @@
+2025-02-21T12:00:00.000Z    INFO    Scanning container image: my-app:latest
+
+Vulnerabilities Found:
+-----------------------------------
+CVE-2024-12345 | HIGH   | OpenSSL 1.1.1g (outdated, upgrade to 1.1.1w)
+CVE-2024-67890 | MEDIUM | glibc 2.27 (possible buffer overflow)
+
+Recommendation:
+- Update OpenSSL to 1.1.1w
+- Upgrade glibc to version 2.29 or later

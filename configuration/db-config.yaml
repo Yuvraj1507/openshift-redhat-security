@@ -1,0 +1,7 @@
+## configs/db-config.yaml
+```yaml
+postgresql:
+  username: admin
+  password: securepassword
+  database: mydb
+```
